@@ -1,0 +1,6 @@
+{
+    "comment_blocks": false,
+    "syntax_scss": true,
+    "syntax_less": false,
+    "spaces_between_prop_value": true
+}
