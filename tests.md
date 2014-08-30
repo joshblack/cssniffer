@@ -21,3 +21,4 @@
 
 TODO:
 Suppress console messages when in TEST mode
+Maybe throttle what is displayed in case you are running this on a huge project (maybe report only first occurence?)
