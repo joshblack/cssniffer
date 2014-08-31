@@ -3,9 +3,9 @@
 1. [x] No `/*` comments
     - [x] Need to account for inline
     - [x] Need to account for block
-2. [x] Space between property name and value
+2. [ ] Space between property name and value
 3. [ ] Use space between selector and `{`
-    - check for \s{ or \S{
+    - [ ] check for \s{ or \S{
 4. [x] Use `.scss` syntax
 5. [x] Use `.less` syntax
 6. [ ] Use hyphens when naming mixins, extends, classes, functions, and variables
@@ -13,12 +13,10 @@
 8. [ ] Use double quotation marks
     - Look for ''s
 9. [ ] Use only lowercase, including colors
-10. [ ] Don't have unit specification after zero
-    - check for 0\s or 0\S
-11. [ ] Use a leading zero in decimal numbers `0.5` vs `.5`
-    - check for .[0-9]
+10. [x] Don't have unit specification after zero
+11. [x] Use a leading zero in decimal numbers `0.5` vs `.5`
 
 
 TODO:
-Suppress console messages when in TEST mode
-Maybe throttle what is displayed in case you are running this on a huge project (maybe report only first occurence?)
+- Maybe throttle what is displayed in case you are running this on a huge project (maybe report only first occurence?)
+- Should feed errors to a logger and say whether each test passed or failed then log at the end, only if not in test mode

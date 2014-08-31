@@ -1,6 +1,8 @@
 {
-    "comment_blocks": false,
+    "comment_blocks": true,
     "syntax_scss": true,
     "syntax_less": false,
-    "spaces_between_prop_value": true
+    "spaces_between_prop_value": false,
+    "leading_zero": true,
+    "unit_specification": true
 }
