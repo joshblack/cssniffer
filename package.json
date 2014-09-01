@@ -20,6 +20,6 @@
   "scripts": {
     "prepublish": "npm prune",
     "test": "mocha --harmony",
-    "start": "node --harmony --use_strict app.js"
+    "start": "node --harmony --use_strict index.js"
   }
 }

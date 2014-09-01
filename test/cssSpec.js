@@ -121,5 +121,15 @@ describe('CSS', function() {
                 done();
             });
         });
+
+        it('should return true if a unit specification is absent after a 0', function(done) {
+            let file = path.resolve('test/mock-css/no-unit-spec.scss');
+
+            rules.check(file, 'unit_specification').then(function(valid) {
+                assert.isTrue(valid);
+                done();
+            });
+        });
+
     });
 });
