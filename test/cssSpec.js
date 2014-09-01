@@ -130,6 +130,25 @@ describe('CSS', function() {
                 done();
             });
         });
+    });
 
+    describe('#single-quotes()', function() {
+        it('should return false if double quotes is used', function(done) {
+            let file = path.resolve('test/mock-css/double-quotes.scss');
+
+            rules.check(file, 'single_quotes').then(function(valid) {
+                assert.isFalse(valid);
+                done();
+            });
+        });
+
+        it('should return true if single quotes are used', function(done) {
+            let file = path.resolve('test/mock-css/single-quotes.scss');
+
+            rules.check(file, 'single_quotes').then(function(valid) {
+                assert.isTrue(valid);
+                done();
+            });
+        });
     });
 });

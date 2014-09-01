@@ -4,5 +4,6 @@
     "syntax_less": false,
     "spaces_between_prop_value": false,
     "leading_zero": false,
-    "unit_specification": true
+    "unit_specification": false,
+    "single_quotes": true
 }
