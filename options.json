@@ -5,5 +5,6 @@
     "spaces_between_prop_value": false,
     "leading_zero": false,
     "unit_specification": false,
-    "double_quotes": true,
+    "double_quotes": false,
+    "space_after_prop": false
 }

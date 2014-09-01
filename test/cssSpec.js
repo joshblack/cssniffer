@@ -2,18 +2,11 @@
 
 let fs = require('fs');
 let path = require('path');
-let chalk = require('chalk');
 let rules = require('../lib/rules');
 let assert = require('chai').assert;
+let nyan = require('../lib/console/nyan');
 
-console.log(chalk.gray('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'));
-console.log(chalk.gray('naNAnananananaNANAnananananana'));
-console.log(chalk.red('-_-__')      + chalk.white(',------,')                               + chalk.gray('     nananananana'));
-console.log(chalk.yellow('-_-__')   + chalk.white('|  ')        + chalk.white(' /\\_/\\')    + chalk.gray('     nananananan')); 
-console.log(chalk.green('-_-__')    +chalk.white('|__')          + chalk.white('( ^ .^)')    + chalk.gray('    nananananan'));
-console.log(chalk.blue('-_-__')     + chalk.white('""   ""')                                 + chalk.gray('      nananananana'));
-console.log(chalk.gray('naNAnananananaNANAnananananana'));
-console.log(chalk.gray('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'));
+nyan();
 
 describe('CSS', function() {
     describe('#comment-blocks()', function() {
@@ -146,6 +139,26 @@ describe('CSS', function() {
             let file = path.resolve('test/mock-css/single-quotes.scss');
 
             rules.check(file, 'double_quotes').then(function(valid) {
+                assert.isFalse(valid);
+                done();
+            });
+        });
+    });
+
+    describe('#space-after-property()', function() {
+        it('should return true if there is a space after the property', function(done) {
+            let file = path.resolve('test/mock-css/space-after-prop.scss');
+
+            rules.check(file, 'space_after_prop').then(function(valid) {
+                assert.isTrue(valid);
+                done();
+            });
+        });
+
+        it('should return false if there is not a space after the property', function(done) {
+            let file = path.resolve('test/mock-css/no-space-after-prop.scss');
+
+            rules.check(file, 'space_after_prop').then(function(valid) {
                 assert.isFalse(valid);
                 done();
             });

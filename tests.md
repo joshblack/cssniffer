@@ -3,7 +3,7 @@
 1. [x] No `/*` comments
     - [x] Need to account for inline
     - [x] Need to account for block
-2. [ ] Space between property name and value
+2. [x] Space between property name and value
 3. [ ] Use space between selector and `{`
     - [ ] check for \s{ or \S{
 4. [x] Use `.scss` syntax
