@@ -132,21 +132,21 @@ describe('CSS', function() {
         });
     });
 
-    describe('#single-quotes()', function() {
-        it('should return false if double quotes is used', function(done) {
+    describe('#double-quotes()', function() {
+        it('should return true if double quotes are used', function(done) {
             let file = path.resolve('test/mock-css/double-quotes.scss');
 
-            rules.check(file, 'single_quotes').then(function(valid) {
-                assert.isFalse(valid);
+            rules.check(file, 'double_quotes').then(function(valid) {
+                assert.isTrue(valid);
                 done();
             });
         });
 
-        it('should return true if single quotes are used', function(done) {
+        it('should return false if single quotes are used', function(done) {
             let file = path.resolve('test/mock-css/single-quotes.scss');
 
-            rules.check(file, 'single_quotes').then(function(valid) {
-                assert.isTrue(valid);
+            rules.check(file, 'double_quotes').then(function(valid) {
+                assert.isFalse(valid);
                 done();
             });
         });

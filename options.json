@@ -5,5 +5,5 @@
     "spaces_between_prop_value": false,
     "leading_zero": false,
     "unit_specification": false,
-    "single_quotes": true
+    "double_quotes": true,
 }
