@@ -20,3 +20,4 @@ TODO:
 - Maybe throttle what is displayed in case you are running this on a huge project (maybe report only first occurence?)
 - Should feed errors to a logger and say whether each test passed or failed then log at the end, only if not in test mode
 - Need to do async testing for opening multiple files at once
+- Rework lib files, generic pattern of just updating regex only and not anything else (abstract)

@@ -1,4 +1,4 @@
-let file = process.argv[2];
+let file = path.resolve(process.argv[2]);
 
 // Need a list of the rules that we are checking for
 let options = require('./options.json');

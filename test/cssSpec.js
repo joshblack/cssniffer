@@ -164,4 +164,19 @@ describe('CSS', function() {
             });
         });
     });
+
+    describe('#lower-case()', function() {
+        // it('should return true if everything is lower case', function(done) {
+
+        // });
+
+        it('should return false if something is uppercase', function(done) {
+            let file = path.resolve('test/mock-css/uppercase.scss');
+
+            rules.check(file, 'lowercase').then(function(valid) {
+                assert.isFalse(valid);
+                done();
+            });
+        });
+    });
 });

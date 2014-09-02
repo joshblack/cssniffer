@@ -6,5 +6,6 @@
     "leading_zero": false,
     "unit_specification": false,
     "double_quotes": false,
-    "space_after_prop": false
+    "space_after_prop": false,
+    "lowercase": false
 }
